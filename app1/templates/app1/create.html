@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Tweepy</title>
+        <link rel="stylesheet" type="text/css"
+        href="{% static 'app1/css/style.css' %}"/>
+    </head>
+    <body>
+        <div class="contents row">
+            <div class="container">
+              <h3>投稿する</h3>      
+              <form aciton = "{%url 'create' % }" method = "POST">
+                {% csrf_token %}
+                {{form.as_table}}
+              <input type = "submit" value = "登録"></td></tr>
+            </form>
+            </div>
+          </div>
+   </body>
+</html>
