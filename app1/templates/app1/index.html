@@ -19,13 +19,7 @@
           </header>
       
           <div class="contents row">
-              <table>
-            <form aciton = "{%url 'index' % }" method = "POST">
-                {% csrf_token %}
-                {{form.as_table}}
-            <tr><td></td><td><input type = "submit" value = "検索"></td></tr>
-            </form>
-           </table>
+              
               {%for item in data %}
               
                 <div class="content_post">
